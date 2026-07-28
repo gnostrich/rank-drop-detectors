@@ -73,11 +73,19 @@ def parse_aplist(path):
             tok = line.split()
             if not tok:
                 continue
-            if len(tok) != 2 + len(PRIMES):
+            if len(tok) < 2 + len(PRIMES):
                 raise ValueError(f"bad aplist line (got {len(tok)} tokens): {line!r}")
             N, cls = int(tok[0]), tok[1]
+            # bad primes > 97 are appended as trailing markers like "+(101)";
+            # they lie outside the 25 columns and are skipped, but validate them
+            for t in tok[2 + len(PRIMES):]:
+                if not (t[0] in "+-?" and t[1] == "(" and t[-1] == ")"):
+                    raise ValueError(f"unexpected trailing token {t!r}: {line!r}")
+                p = int(t[2:-1])
+                if p <= 97 or N % p != 0:
+                    raise ValueError(f"trailing marker {t!r} inconsistent: {line!r}")
             vals, good = [], []
-            for t in tok[2:]:
+            for t in tok[2:2 + len(PRIMES)]:
                 if t in ("+", "-", "?"):
                     vals.append(0)
                     good.append(False)
