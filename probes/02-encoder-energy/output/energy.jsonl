@@ -1,0 +1,6 @@
+{"cell": "K1", "eps0": -6, "entry_type": "DUP", "k": 26645, "members_hash": "sha256:74987329a4acaa35", "delta_E_bits": -1380807.9592708373, "escapes": 0, "gate": "PASS"}
+{"cell": "K2", "eps0": -6, "entry_type": "BRIDGE", "l": 5, "k": 143, "members_hash": "sha256:4563738cb0204590", "delta_E_bits": 52.96089626312667, "saving_pred_mean": 54.85304249817779, "saving_meas_mean": 47.353421540152866, "rel_err": 0.13672205982510566, "escapes": 291, "gate": "FAIL"}
+{"cell": "K3", "eps0": -6, "entry_type": "PATTERN", "l": 5, "k": 143, "members_hash": "sha256:4563738cb0204590", "delta_E_bits": -2928.49547851537, "A_pat_meas": -3185.456374778497, "A_pat_pred": -2838.3580720071886, "rel_err": 0.12228841251373626, "gate": "PASS"}
+{"cell": "K4", "eps0": -6, "entry_type": "HUB", "groups": 714, "frac_negative": 1.0, "frac_in_band": 0.35154061624649857, "gate": "FAIL"}
+{"cell": "K5", "eps0": -6, "entry_type": "TEST", "l": 5, "X": 391, "delta_E_test": 850.7076342633036, "delta_E_pattern": -2928.49547851537, "gate": "PASS"}
+{"cell": "K7", "eps0": -6, "entries": 5275, "delta_E_bits": -66523.0891819722, "fraction_of_L0": 0.016737999945923374, "gate": "REPORT"}
