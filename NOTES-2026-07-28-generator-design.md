@@ -48,15 +48,29 @@ generator (see §6 for why this is now a hard rule).
   Known-answer check: the 143-member mod-5 family from probe 01 must yield
   the predicate "has a rational 5-isogeny" (the human definition, recovered
   blind).
-- A **hub** is the move that escapes the table: when a cluster is a hairball
-  of ~k² pairwise bridges, posit ONE new node that all k members map to
-  (probe 01's 143-family: the mod-5 Eisenstein representation — not an
-  elliptic curve, not a row in the table). k² edges collapse to k spokes;
-  the energy drop is the evidence the new object exists. A hub is a real
-  definition, not a column: it predicts members outside the table, it gets
-  its own fingerprint row (becomes a first-class object), and it must pay
-  rent across tables (a hub that only ever organizes one table was a
-  coincidence dressed up).
+- A **hub** is the move that escapes the table: posit ONE new node that all
+  k members of a cluster map to (probe 01's 143-family: the mod-5 Eisenstein
+  representation — not an elliptic curve, not a row in the table).
+  *Amended (probe 02, prereg §5.1 P-c):* the honest comparator is not the
+  ~k² unpruned detector edges — an MDL judge already holds a spanning tree
+  of k−1 bridges. Against that tree, the hub's own residue vector costs
+  C·log₂ l and the tree's root row forgoes exactly S_root = C·log₂ l; these
+  cancel identically, and what survives is pointer economy alone:
+  `A_HUB(k) = Γ(k) + (2−k)·log₂ N − 5(k−1)` — linear in k, not quadratic;
+  independent of l and of the data; negative for every k ≥ 3. The
+  conclusion (hubs win from k = 3) survives; the mechanism differs.
+  [Measured in probe 02: the sign held in 714/714 groups; the ±20%
+  quantitative band held in only 35% — the cancellation is a clean-marginals
+  idealization. See `probes/02-encoder-energy/RESULTS.md`.]
+  *Amended (probe 02, §10):* the energy drop is evidence that hubs are
+  cheaper **bookkeeping**, not evidence that the new object exists.
+  Existence is carried entirely by the two properties compression does not
+  test — out-of-table prediction and cross-table rent, below — and neither
+  is a probe-02 fact; neither may be cited as one. A hub earns "real
+  definition, not a column" only through those untested properties: it
+  predicts members outside the table, it gets its own fingerprint row
+  (becomes a first-class object), and it must pay rent across tables (a hub
+  that only ever organizes one table was a coincidence dressed up).
 - **Concept-gap case:** a cluster that compresses but matches no predicate in
   the declared vocabulary = a proven missing concept, with its extension
   enumerated. That is a deliverable, not a failure.
