@@ -41,3 +41,17 @@ encoder exists is the only version of this that is worth anything.
 | train | 1 – 9999 | open | — |
 | seal-1 | 10000 – 99999 | **sealed** | registered confrontation, one per hypothesis |
 | seal-2 | 100000 – 500000 | **sealed** | reserved for revised hypotheses only |
+
+## Probe-03 bands (added 2026-07-28, same commit as probes/03-transport/PREREG.md)
+
+Top decile of each newly added family's declared band, sealed before any scan.
+Sealed rows are downloaded and stored but excluded from every scan, codebook,
+transport, and measurement; one-look rule as above.
+
+| family block | measure | open | sealed |
+|---|---|---|---|
+| F2 newforms wt 2 (Q) | level | 1 – 900 | **901 – 1000** |
+| F3a EC / 2.2.5.1 | conductor norm | 1 – 900 | **901 – 1000** |
+| F3b EC / 2.2.8.1 | conductor norm | 1 – 900 | **901 – 1000** |
+| F4a HMF / 2.2.5.1 | level norm | 1 – 900 | **901 – 1000** |
+| F4b HMF / 2.2.8.1 | level norm | 1 – 900 | **901 – 1000** |
