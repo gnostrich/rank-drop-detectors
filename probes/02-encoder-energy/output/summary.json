@@ -1,0 +1,163 @@
+{
+ "seed": 20260728,
+ "eps_bits_main": 6,
+ "TOT": 262144,
+ "readings": [
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5"
+ ],
+ "ecdata_sha": "25cec5ecfec8b9f016eb1631ac633194c2bed39f",
+ "H1": {
+  "aplist_roundtrip_failures": 0,
+  "allcurves_roundtrip_failures": 0,
+  "dup_aplist_rows": 0,
+  "curves_without_class_row": 0,
+  "class_rows_without_curve": 0,
+  "probe01_reconstruction": {
+   "5": 3521,
+   "7": 896,
+   "11": 32,
+   "13": 5
+  },
+  "probe01_reconstruction_ok": true,
+  "g143_size": 143,
+  "g143_contains_11a": true,
+  "pass": true
+ },
+ "K5_phi_size": 534,
+ "K5_X_size": 391,
+ "H2": {
+  "pass": true,
+  "note": "well-typed combos (reading R4)"
+ },
+ "H3": {
+  "pass": "True"
+ },
+ "H4": {
+  "T_cls": {
+   "per_cell_bits": 4.173726362142872,
+   "mean_plugin_xent": 4.173726362142872,
+   "diff": 0.0
+  },
+  "T_crv": {
+   "per_cell_bits": 3.9520592004296224,
+   "mean_plugin_xent": 3.952059200429623,
+   "diff": 4.440892098500626e-16
+  },
+  "pass": true
+ },
+ "N1": {
+  "pass": true,
+  "compressing_foils": {
+   "BRIDGE": 0,
+   "PATTERN": 0,
+   "HUB": 0
+  }
+ },
+ "N2": {
+  "replayed": 31243,
+  "compressing": 0,
+  "detail": {
+   "5": {
+    "entries": 3665,
+    "compressing": 0
+   },
+   "7": {
+    "entries": 896,
+    "compressing": 0
+   },
+   "11": {
+    "entries": 32,
+    "compressing": 0
+   },
+   "13": {
+    "entries": 5,
+    "compressing": 0
+   },
+   "DUP": {
+    "entries": 26645,
+    "compressing": 0
+   }
+  },
+  "pass": true
+ },
+ "N3": {
+  "L0_diff": 0.0,
+  "analytic": {
+   "K2": 9.094947017729282e-13,
+   "K3": 2.7284841053187847e-12,
+   "K4": 1.0186340659856796e-09,
+   "K5": 2.7284841053187847e-12
+  },
+  "streams": {
+   "empty-A": 0,
+   "K3": 0,
+   "K4": 0
+  },
+  "pass": true
+ },
+ "K": {
+  "K1": {
+   "delta_E": -1380807.9592708373,
+   "dup_cell_ratio": 0.00635684638870833,
+   "n_dups": 26645,
+   "escapes": 0,
+   "pass": true
+  },
+  "K2": {
+   "delta_E": 52.96089626312667,
+   "mean_saving_pred": 54.85304249817779,
+   "mean_saving_meas": 47.353421540152866,
+   "rel_err": 0.13672205982510566,
+   "escapes": 291,
+   "pass": false
+  },
+  "K3": {
+   "A_pat_meas": -3185.456374778497,
+   "A_pat_pred": -2838.3580720071886,
+   "rel_err": 0.12228841251373626,
+   "delta_E_true": -2928.49547851537,
+   "pass": true
+  },
+  "K4": {
+   "groups": 714,
+   "frac_negative": 1.0,
+   "frac_in_band": 0.35154061624649857,
+   "k2_groups": 3740,
+   "k2_mean_A": 7.333744350395848,
+   "k2_frac_negative": 0.015508021390374332,
+   "pass": false
+  },
+  "K5": {
+   "X": 391,
+   "delta_E_test": 850.7076342633036,
+   "delta_E_pattern": -2928.49547851537,
+   "test_beats_pattern": false,
+   "iff_rhs": false,
+   "pass": true
+  },
+  "K6": {
+   "flips": [
+    {
+     "cell": "K2",
+     "eps_bits": 4
+    }
+   ],
+   "pass": false
+  },
+  "K7": {
+   "entries": 5275,
+   "delta_E": -66523.0891819722,
+   "fraction_of_L0": 0.016737999945923374
+  }
+ },
+ "verdict": "PARTIAL",
+ "failed_K_cells": [
+  "K2",
+  "K4"
+ ],
+ "runtime_s": 104.8
+}

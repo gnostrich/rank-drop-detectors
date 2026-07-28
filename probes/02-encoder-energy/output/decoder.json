@@ -1,0 +1,58 @@
+[
+ {
+  "table": "T_cls",
+  "book": "empty",
+  "byte_identical": true,
+  "emitted_bytes": 496185,
+  "analytic_bits": 3969422.5,
+  "rel_err": 1.4496638906236559e-05
+ },
+ {
+  "table": "T_crv",
+  "book": "empty",
+  "byte_identical": true,
+  "emitted_bytes": 798904,
+  "analytic_bits": 6391171.3,
+  "rel_err": 9.491616172152461e-06
+ },
+ {
+  "table": "T_crv",
+  "book": "K1-book",
+  "byte_identical": true,
+  "emitted_bytes": 503195,
+  "analytic_bits": 4025500.9,
+  "rel_err": 1.4691397723527546e-05
+ },
+ {
+  "table": "T_cls",
+  "book": "K2-book",
+  "byte_identical": true,
+  "emitted_bytes": 495563,
+  "analytic_bits": 3964444.3,
+  "rel_err": 1.5066208185144563e-05
+ },
+ {
+  "table": "T_cls",
+  "book": "K3-book",
+  "byte_identical": true,
+  "emitted_bytes": 495544,
+  "analytic_bits": 3964296.2,
+  "rel_err": 1.4082561711957743e-05
+ },
+ {
+  "table": "T_cls",
+  "book": "K4-book",
+  "byte_identical": true,
+  "emitted_bytes": 483329,
+  "analytic_bits": 3866577.9,
+  "rel_err": 1.3998291793295696e-05
+ },
+ {
+  "table": "T_cls",
+  "book": "K5-book",
+  "byte_identical": true,
+  "emitted_bytes": 495544,
+  "analytic_bits": 3964296.2,
+  "rel_err": 1.4082561711957743e-05
+ }
+]
