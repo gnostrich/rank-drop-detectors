@@ -306,18 +306,25 @@ def eval_mod_entry(table, e, eps_bits):
 
 
 def eval_dup_book(table, book, eps_bits):
-    """Vectorized DUP-book evaluation (disjoint target rows)."""
+    """Vectorized DUP-book evaluation (disjoint target rows).
+
+    Per claimed cell: conform costs fb (delta fb - baseline), escape costs
+    eps + baseline literal (delta +eps)."""
     fb = flag_bits(eps_bits)
     parents = np.array([e.i for e in book], dtype=np.int64)
     children = np.array([e.j for e in book], dtype=np.int64)
     conform = table.SYM[children] == table.SYM[parents]
     conf_rows = conform.sum(axis=1)
     esc_rows = C - conf_rows
-    cells_rows = fb * conf_rows + eps_bits * esc_rows
+    logq_children = table.logq_cell[children]
+    conf_logq = (logq_children * conform).sum(axis=1)
+    esc_logq = (logq_children * ~conform).sum(axis=1)
+    delta_rows = fb * conf_rows - conf_logq + eps_bits * esc_rows
+    abs_cost_rows = fb * conf_rows + eps_bits * esc_rows + esc_logq
     cost = np.full(len(book), H_BITS + 2 * table.log2N)
-    return {"delta_E": float((cost + cells_rows).sum()),
-            "per_entry_delta_E": cost + cells_rows,
-            "cells_bits": float(cells_rows.sum()),
+    return {"delta_E": float((cost + delta_rows).sum()),
+            "per_entry_delta_E": cost + delta_rows,
+            "cells_bits": float(abs_cost_rows.sum()),
             "conform": int(conf_rows.sum()), "escapes": int(esc_rows.sum())}
 
 
@@ -356,7 +363,7 @@ def book_cells_delta(table, book, owner, rho, dup_parent, eps_bits):
         idx = owner[r, c]
         if types[idx] == "DUP":
             if table.SYM[r, c] == table.SYM[dup_parent[r], c]:
-                total += fb
+                total += fb - table.logq_cell[r, c]
                 conf += 1
             else:
                 total += eps_bits
