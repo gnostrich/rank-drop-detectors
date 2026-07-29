@@ -55,3 +55,11 @@ transport, and measurement; one-look rule as above.
 | F3b EC / 2.2.8.1 | conductor norm | 1 – 900 | **901 – 1000** |
 | F4a HMF / 2.2.5.1 | level norm | 1 – 900 | **901 – 1000** |
 | F4b HMF / 2.2.8.1 | level norm | 1 – 900 | **901 – 1000** |
+
+## Probe-04 bands (added 2026-07-29, same commit as probes/04-degree4/PREREG.md)
+
+| family block | measure | open | sealed |
+|---|---|---|---|
+| F5 genus-2 curves / Q | conductor | 1 – 9000 | **9001 – 10000** |
+| F6 abelian-surface classes / Q | conductor | 1 – 9000 | **9001 – 10000** |
+| F7 Siegel/paramodular wt [2,0] | level | top decile of whatever exists | (vacuous if F7 is empty; stated in RESULTS) |
