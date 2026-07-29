@@ -1,0 +1,155 @@
+{
+ "seed": 20260728,
+ "rows_open": {
+  "F5": 2789,
+  "F6": 2538,
+  "F7": 0,
+  "F1": 2463
+ },
+ "rows_sealed": {
+  "F5": 280,
+  "F6": 269,
+  "F7": 0,
+  "F1": 0
+ },
+ "F2_reference_rows": 5951,
+ "F7_weight20_rows_found": 0,
+ "H1": {
+  "rows": 200,
+  "columns_checked": 4521,
+  "mismatches": 0,
+  "functional_eq_violations": 0,
+  "pass": true
+ },
+ "H4": {
+  "decomposable": 399,
+  "gl2_type_classes": 430,
+  "product_endalg_classes": 399,
+  "hits_with_product_endalg": 399,
+  "product_endalg_not_hit": 0,
+  "implemented": true
+ },
+ "codebook": {
+  "cross_dups": {
+   "F6xF5": 2789,
+   "F5xF7": 0,
+   "F6xF7": 0
+  },
+  "patterns": {
+   "F5": 0,
+   "F6": 0,
+   "F7": 0
+  }
+ },
+ "H2": {
+  "streams": [
+   {
+    "block": "F5",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0001971
+   },
+   {
+    "block": "F6",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.000222
+   },
+   {
+    "block": "F7",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0,
+    "note": "0 rows"
+   },
+   {
+    "block": "F1",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0002495
+   }
+  ],
+  "pass": true
+ },
+ "H3": {
+  "curated_subset_size": 0,
+  "blind_recovered": 0,
+  "recall": null,
+  "smoke_test": true,
+  "pass": true
+ },
+ "N1": {
+  "cross_matches_on_shuffled": 0,
+  "pass": true
+ },
+ "N2": {
+  "foils": 3000,
+  "detected": 3000,
+  "power": 1.0,
+  "pass": true
+ },
+ "N3_depth_curve": {
+  "10": {
+   "F6xF5": 254,
+   "F6xF7_and_F5xF7": 0,
+   "sieve_decomposable": 1
+  },
+  "25": {
+   "F6xF5": 2789,
+   "F6xF7_and_F5xF7": 0,
+   "sieve_decomposable": 399
+  },
+  "50": {
+   "F6xF5": 2789,
+   "F6xF7_and_F5xF7": 0,
+   "sieve_decomposable": 399,
+   "note": "only 25 primes available; 50/all = 25"
+  },
+  "all": {
+   "F6xF5": 2789,
+   "F6xF7_and_F5xF7": 0,
+   "sieve_decomposable": 399,
+   "note": "only 25 primes available; 50/all = 25"
+  }
+ },
+ "K1": {
+  "cross_matches": 2789,
+  "label_bookkeeping": 2789,
+  "residual_count": 0,
+  "residuals": []
+ },
+ "K2": {
+  "rows": {
+   "F5": 2789,
+   "F6": 2538,
+   "F7": 0,
+   "F1": 2463
+  },
+  "primes_per_row": 25,
+  "comparable_pairs_deg4_x_F7": 0,
+  "curated_links_for_H3": 0,
+  "case": "SAMPLE-SIZE"
+ },
+ "K3": {
+  "F5": {
+   "L0": 310542.8335407755,
+   "bits_saved": 215733.97060655666,
+   "fraction": 0.6946995625266295,
+   "billing": "duplication artifact: F5 rows share class L-functions with F6; this fraction is a copy, NOT comparable to probe 02's 1.67%"
+  },
+  "F6": {
+   "L0": 283751.95415072853,
+   "bits_saved": 0,
+   "fraction": 0.0,
+   "billing": "structure only"
+  },
+  "F7": {
+   "L0": 0,
+   "bits_saved": 0,
+   "fraction": null,
+   "billing": "empty family"
+  }
+ },
+ "verdict": "UNDERPOWERED",
+ "runtime_s": 6.6
+}
