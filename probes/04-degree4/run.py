@@ -155,7 +155,7 @@ def main():
     class_euler = {}
     for r in f6_rows:
         ef = json.loads(r["euler_factors"])
-        class_euler[(int(r["cond"]), r["class"])] = ef
+        class_euler[(int(r["cond"]), r["class"].split(".")[-1])] = ef
 
     def cond_markers(N):
         return [p_ for p_ in PRIMES if N % p_ == 0]
@@ -172,9 +172,9 @@ def main():
     f5_vals, f5_meta = [], []
     for r in sorted(f5_rows, key=lambda r: (int(r["cond"]), r["label"])):
         N = int(r["cond"])
-        ef = class_euler.get((N, r["class"]))
+        ef = class_euler.get((N, r["class"].split(".")[-1]))
         f5_vals.append(trace_row(N, ef))
-        f5_meta.append({"label": r["label"], "class": f"{N}.{r['class']}",
+        f5_meta.append({"label": r["label"], "class": f"{N}.{r['class'].split('.')[-1]}",
                         "cond": N, "abs_disc": int(r["abs_disc"]),
                         "eqn": r["eqn"], "gl2": r["is_gl2_type"],
                         "end_alg": r["end_alg"],
@@ -237,7 +237,8 @@ def main():
     blocks, sealed = {}, {}
     for name, b in (("F5", F5), ("F6", F6), ("F7", F7), ("F1", F1)):
         blocks[name], sealed[name] = split_sealed(b)
-        blocks[name].build_table()
+        if blocks[name].N:
+            blocks[name].build_table()
     N_total = sum(b.N for b in blocks.values())
     log2N = math.log2(N_total)
     report["rows_open"] = {k: b.N for k, b in blocks.items()}
@@ -259,6 +260,8 @@ def main():
             eqn = json.loads(eqn)
         f, h = eqn
         ef = class_euler[(m["cond"], m["class"].split(".")[1])]
+        if ef is None:
+            continue
         for k, p_ in enumerate(PRIMES):
             if p_ == 2 or m["cond"] % p_ == 0 or m["abs_disc"] % p_ == 0:
                 continue

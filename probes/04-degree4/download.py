@@ -79,7 +79,7 @@ def main():
                         json.dumps(r["eqn"]), json.dumps(r["bad_lfactors"]),
                         r["is_gl2_type"], r["end_alg"], r["geom_end_alg"],
                         r["st_group"], r["Lhash"], int(r["cond"] > 9000)])
-    classes = sorted({(r["cond"], r["class"]) for r in rows})
+    classes = sorted({(r["cond"], r["class"].split(".")[-1]) for r in rows})
     print(f"F5 curves: {len(rows)}; classes: {len(classes)}")
 
     # F6 — class L euler factors, one lfunc request per class
