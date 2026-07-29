@@ -1,0 +1,244 @@
+{
+ "seed": 20260728,
+ "readings": [
+  "R1",
+  "R2",
+  "R3",
+  "R4"
+ ],
+ "f2_dim_gt1_marker_rows": 3488,
+ "rows_open": {
+  "F1": 2463,
+  "F2": 5092,
+  "F3a": 575,
+  "F3b": 1045,
+  "F4a": 575,
+  "F4b": 1045
+ },
+ "rows_sealed": {
+  "F1": 0,
+  "F2": 859,
+  "F3a": 57,
+  "F3b": 105,
+  "F4a": 57,
+  "F4b": 105
+ },
+ "N_total": 10795,
+ "L0_total_bits": 928111.0669954473,
+ "H1": {
+  "hasse_violations": 0,
+  "pointcount_mismatches_vs_cremona": 0,
+  "pass": true
+ },
+ "codebook": {
+  "cross_dups": {
+   "F1xF2": 2137,
+   "F3axF4a": 575,
+   "F3bxF4b": 1045
+  },
+  "patterns": {
+   "F1": 2,
+   "F2": 0,
+   "F3a": 2,
+   "F3b": 3,
+   "F4a": 1,
+   "F4b": 1
+  }
+ },
+ "H2": {
+  "streams": [
+   {
+    "block": "F1",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0002495
+   },
+   {
+    "block": "F1",
+    "book": "patterns(2)",
+    "identical": true,
+    "rel": 0.0002529
+   },
+   {
+    "block": "F2",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0001879
+   },
+   {
+    "block": "F3a",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0010972
+   },
+   {
+    "block": "F3a",
+    "book": "patterns(2)",
+    "identical": true,
+    "rel": 0.0010487
+   },
+   {
+    "block": "F3b",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0006105
+   },
+   {
+    "block": "F3b",
+    "book": "patterns(3)",
+    "identical": true,
+    "rel": 0.0005825
+   },
+   {
+    "block": "F4a",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0010364
+   },
+   {
+    "block": "F4a",
+    "book": "patterns(1)",
+    "identical": true,
+    "rel": 0.0010766
+   },
+   {
+    "block": "F4b",
+    "book": "empty",
+    "identical": true,
+    "rel": 0.0005854
+   },
+   {
+    "block": "F4b",
+    "book": "patterns(1)",
+    "identical": true,
+    "rel": 0.0005775
+   }
+  ],
+  "pass": "True"
+ },
+ "K1": {
+  "matched": 2137,
+  "truth_links": 2137,
+  "tp": 2137,
+  "precision": 1.0,
+  "recall": 1.0,
+  "residuals_vs_curation": [],
+  "missed": [],
+  "pass": true
+ },
+ "C4_pointwise_identical": true,
+ "cycle_counts": {
+  "C1": 104,
+  "C3": 102,
+  "C2": 2137
+ },
+ "N2_floors": {
+  "C1": 0.0,
+  "C3": 0.0,
+  "C2": 0.0
+ },
+ "H3": {
+  "known_commuting_instances": 2241,
+  "above_floor": 0,
+  "worst": [],
+  "pass": true
+ },
+ "N1": {
+  "cross_matches_on_shuffled": 0,
+  "pass": true
+ },
+ "N3": {
+  "foils": 2345,
+  "detected": 2345,
+  "power": 1.0,
+  "pass": true
+ },
+ "K5": {
+  "instances": 2343,
+  "above_floor": 79,
+  "total_delta_bits": 543.3792543093426,
+  "concentration_top1pct": 0.4099557357571489
+ },
+ "K3": {
+  "F1": {
+   "L0": 250597.54089544792,
+   "bits_saved": 1205.2697197059006,
+   "fraction": 0.004809583188243465
+  },
+  "F2": {
+   "L0": 341608.77569536865,
+   "bits_saved": 158743.75218262512,
+   "fraction": 0.4646945965000198
+  },
+  "F3a": {
+   "L0": 60803.39457531768,
+   "bits_saved": 1112.3430246535197,
+   "fraction": 0.01829409414429405
+  },
+  "F3b": {
+   "L0": 107609.54300675553,
+   "bits_saved": 1382.8498053804612,
+   "fraction": 0.012850624273106043
+  },
+  "F4a": {
+   "L0": 60327.3961284407,
+   "bits_saved": 29870.492663906207,
+   "fraction": 0.49513976370387525
+  },
+  "F4b": {
+   "L0": 107164.4166941167,
+   "bits_saved": 51911.253390321464,
+   "fraction": 0.4844075579536223
+  }
+ },
+ "K4a": {
+  "1000": {
+   "rows": 2463,
+   "entries": 2,
+   "bits_saved": 1307.5997058056241,
+   "L0": 250597.54089544792,
+   "fraction": 0.005217927123838654
+  },
+  "9999": {
+   "rows": 38042,
+   "entries": 2,
+   "bits_saved": 3414.818920292726,
+   "L0": 3866992.398486133,
+   "fraction": 0.0008830684336564959
+  }
+ },
+ "K4b": [
+  {
+   "through": "F1",
+   "entries": 2,
+   "bits_saved": 1205.3
+  },
+  {
+   "through": "F2",
+   "entries": 2139,
+   "bits_saved": 159949.0
+  },
+  {
+   "through": "F3a",
+   "entries": 2141,
+   "bits_saved": 161061.4
+  },
+  {
+   "through": "F3b",
+   "entries": 2144,
+   "bits_saved": 162444.2
+  },
+  {
+   "through": "F4a",
+   "entries": 2720,
+   "bits_saved": 192314.7
+  },
+  {
+   "through": "F4b",
+   "entries": 3766,
+   "bits_saved": 244226.0
+  }
+ ],
+ "verdict": "LOSSY",
+ "runtime_s": 12.3
+}
