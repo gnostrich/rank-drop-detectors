@@ -44,9 +44,9 @@ def load_module(name, relpath):
     return m
 
 
-p01 = load_module("p01r", "../01-congruence-census/run.py")
-p02 = load_module("p02r", "../02-encoder-energy/run.py")
 p03 = load_module("p03r", "../03-transport/run.py")
+p02 = p03.p02          # single shared instance: p02_norms patches THIS module
+p01 = p03.p01
 
 
 # ---------------------------------------------------------------- helpers
