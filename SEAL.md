@@ -63,3 +63,9 @@ transport, and measurement; one-look rule as above.
 | F5 genus-2 curves / Q | conductor | 1 – 9000 | **9001 – 10000** |
 | F6 abelian-surface classes / Q | conductor | 1 – 9000 | **9001 – 10000** |
 | F7 Siegel/paramodular wt [2,0] | level | top decile of whatever exists | (vacuous if F7 is empty; stated in RESULTS) |
+
+## Probe-05 bands (added 2026-07-29, same commit as probes/05-mint/PREREG.md)
+
+| family block | measure | open | sealed |
+|---|---|---|---|
+| Artin dim-2 rational / Q | conductor | 1 – 1800 | **1801 – 2000** |
