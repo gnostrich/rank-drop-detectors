@@ -1,0 +1,98 @@
+{
+ "seed": 20260728,
+ "theta": 1e-06,
+ "folds": 5,
+ "R_max": 5,
+ "H": {
+  "masked_fit": true,
+  "coder": true,
+  "scorer_cal": true,
+  "pass": true
+ },
+ "real_rounds": [
+  {
+   "round": 1,
+   "scored": 22523,
+   "promoted": 765,
+   "promoted_total": 765,
+   "quarantined_total": 4040,
+   "bits_state": 3929899.8
+  },
+  {
+   "round": 2,
+   "scored": 3830,
+   "promoted": 824,
+   "promoted_total": 1589,
+   "quarantined_total": 4052,
+   "bits_state": 4114692.1
+  },
+  {
+   "round": 3,
+   "scored": 4130,
+   "promoted": 976,
+   "promoted_total": 2565,
+   "quarantined_total": 4072,
+   "bits_state": 4338438.3
+  },
+  {
+   "round": 4,
+   "scored": 4906,
+   "promoted": 1388,
+   "promoted_total": 3953,
+   "quarantined_total": 4128,
+   "bits_state": 4666755.3
+  },
+  {
+   "round": 5,
+   "scored": 7010,
+   "promoted": 2584,
+   "promoted_total": 6537,
+   "quarantined_total": 4298,
+   "bits_state": 5296037.4
+  }
+ ],
+ "bits_traj": [
+  3929899.8,
+  4114692.1,
+  4338438.3,
+  4666755.3,
+  5296037.4
+ ],
+ "chain_depth_hist": {
+  "0": 765,
+  "1": 824,
+  "2": 976,
+  "3": 1388,
+  "4": 2584
+ },
+ "promoted_count": 6537,
+ "promotion_rate_by_type": {
+  "closed": {
+   "scored": 126,
+   "promoted": 125
+  },
+  "free": {
+   "scored": 42273,
+   "promoted": 22843
+  }
+ },
+ "eis_promoted": true,
+ "shuffled_rounds": [
+  {
+   "round": 1,
+   "scored": 75,
+   "promoted": 0,
+   "promoted_total": 0,
+   "quarantined_total": 75,
+   "bits_state": 3866992.4
+  }
+ ],
+ "shuffled_promoted": 0,
+ "N2": {
+  "jaccard_min": 0.06839911743074283,
+  "jaccard_mean": 0.07381435946719656,
+  "floor_q95_bits": 861.7505092162521
+ },
+ "verdict": "SATURATED",
+ "runtime_s": 4873.5
+}
